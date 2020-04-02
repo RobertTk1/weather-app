@@ -51,7 +51,7 @@ body {
 }
 
 main {
-  min-height: 99vh;
+  min-height: 95vh;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.2),
