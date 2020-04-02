@@ -1,13 +1,204 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "montserat", sans-serif;
+}
+
+.body1 {
+  background-color: yellow;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  background: rgb(34, 193, 195);
+  background: radial-gradient(
+    circle,
+    rgba(34, 193, 195, 1) 6%,
+    rgba(255, 255, 255, 0.49425287356321834) 82%
+  );
+  justify-content: center;
+  padding: 0.5rem 0;
+  background-repeat: no-repeat;
+  transition: 0.4s ease-out;
+}
+
+.hot {
+  background: rgb(103, 53, 97);
+  background: radial-gradient(
+    circle,
+    rgba(103, 53, 97, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+}
+
+.app {
+  background-image: url("./assets/cold-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+  max-width: 375px;
+  max-height: 780px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.app.warm {
+  background-image: url(./assets/warm-bg.jpg);
+}
+
+main {
+  min-height: 99vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+  padding: 20px;
+  margin: 0;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+  text-align: center;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px 0px 16px 16px;
+  border: none;
+  margin-top: -20px;
+  margin-bottom: 10rem;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  color: #313131;
+  font-size: 25px;
+  transition: 0.04s ease;
+  outline: none;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgb(255, 255, 255);
+}
+
+/*.search-box button {
+  padding: 0.5rem;
+  width: 9rem;
+  margin: 0.5rem auto 2rem;
+  background: black;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px gray;
+  outline: none;
+}*/
+
+.info {
+  text-align: center;
+}
+.info .location {
+  margin-top: -2rem;
+  margin-bottom: 35px;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.weather-box .tempMax {
+  color: rgba(250, 245, 245, 0.932);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-right: -10rem;
+}
+
+.weather-box .tempMax span {
+  font-size: 1.5rem;
+}
+
+.weather-box .temp {
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 15px 25px;
+  color: white;
+  font-size: 7rem;
+  font-weight: 600;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .tempMin {
+  color: rgba(250, 245, 245, 0.932);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-left: -10rem;
+}
+
+.weather-box .tempMin span {
+  font-size: 1.5rem;
+}
+
+.weather-box .weather {
+  color: white;
+  margin: 3.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+/* welcome|Intro page*/
+
+.welcome {
+  padding: 1.5rem;
+  margin-top: -3rem;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.welcome .msg {
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-size: 2rem;
+  text-shadow: 3px 2px gray;
+}
+
+.welcome h1 {
+  margin: 3rem 1rem 0 1rem;
+  background: rgb(34, 193, 195);
+  background: radial-gradient(
+    circle,
+    rgba(34, 193, 195, 1) 6%,
+    rgba(255, 255, 255, 0.49425287356321834) 82%
+  );
+  border-radius: 2rem 1.2rem;
+  padding: 0.5rem;
+  text-shadow: 3px 2px gray;
+}
+
+.app .creator {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 20vh;
+  padding: 1.5vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  text-shadow: 0.5px 0.5px rgb(187, 184, 184);
+  box-shadow: 2px 5px black;
+  color: black;
+}
+
+.app .creator p {
+  font-size: 0.9rem;
+  font-weight: 800;
 }
