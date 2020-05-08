@@ -55,7 +55,7 @@ function WeatherDisplay({ weather, search }) {
       ) : (
         <div className="welcome">
           <h2 className="msg">WELCOME</h2>
-          <h3 className="msg">TO test</h3>
+          <h3 className="msg">TO</h3>
           <h1>Weather.io</h1>
           <div className="creator">
             <h3>Made By</h3>
