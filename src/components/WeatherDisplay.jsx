@@ -5,11 +5,11 @@ function WeatherDisplay({ weather, search }) {
 
   const [query, setQuery] = useState("");
 
-  const converter = celcius => {
+  const converter = (celcius) => {
     return Math.round(celcius * 1.8 + 32);
   };
 
-  const press = e => {
+  const press = (e) => {
     if (e.key === "Enter") {
       search(query);
       setQuery("");
@@ -24,10 +24,10 @@ function WeatherDisplay({ weather, search }) {
           className="search-bar"
           placeholder="City name ..."
           value={query}
-          onChange={e => {
+          onChange={(e) => {
             setQuery(e.target.value);
           }}
-          onKeyPress={e => {
+          onKeyPress={(e) => {
             press(e);
           }}
         />
@@ -55,7 +55,7 @@ function WeatherDisplay({ weather, search }) {
       ) : (
         <div className="welcome">
           <h2 className="msg">WELCOME</h2>
-          <h3 className="msg">TO</h3>
+          <h3 className="msg">TO test</h3>
           <h1>Weather.io</h1>
           <div className="creator">
             <h3>Made By</h3>
